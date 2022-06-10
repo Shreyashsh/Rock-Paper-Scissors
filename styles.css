@@ -1,13 +1,19 @@
-.container{
+.container, .pane{
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 50px;
 }
+.pane{
+    flex-direction: column;
+}
 body {
+    background-image: url("image/backg.jpg");
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 500px;
+    justify-content: space-evenly;
 }
 
 button {
@@ -18,17 +24,18 @@ button {
     font-weight: bolder;
 }
 #rock {
-    background-color: rgb(110, 94, 94);
+    background-color: rgb(110, 94, 94, 0.7);
 }
 #paper {
-    background-color: rgb(186, 186, 199);
+    background-color: rgb(186, 186, 199, 0.7);
 }
 #scissors {
-    background-color: rgb(41, 172, 172);
+    background-color: rgb(41, 172, 172, 0.7);
 }
 .pane {
     height: 100px;
-    background-color: rgb(236, 221, 221);
-    font-size: large;
+    background-color: rgba(26, 97, 138, 0.8);
+    font-size: larger;
+    font-weight: bolder;
     text-align: center;
 }

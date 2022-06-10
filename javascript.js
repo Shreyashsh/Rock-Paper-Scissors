@@ -25,6 +25,15 @@ function playRound(playerSelection){
         result = "You lose!";
     }
     let curScore = score[0] + " - " + score[1];
+    if(score[0]==5) {
+        result = "You win! Congratulations!";
+        score = [0, 0];
+    }
+    if(score[1]==5){
+        result = "You lose! Better luck next time!";
+        score = [0, 0];
+    }
+    
     document.getElementById('result').innerHTML = result;
     document.getElementById('score').innerHTML = curScore;
     return;

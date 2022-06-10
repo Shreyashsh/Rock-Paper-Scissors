@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    height: 100px;
+    background-color: rgb(127, 255, 127);
+    width: 100px;
+    border-radius: 35px;
+    font-weight: bolder;
+}

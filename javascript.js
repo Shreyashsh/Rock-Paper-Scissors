@@ -30,7 +30,7 @@ function playRound(playerSelection){
         score = [0, 0];
     }
     if(score[1]==5){
-        result = "You lose! Better luck next time!";
+        result = "Pity. The machine has prevailed over your primitive brain.";
         score = [0, 0];
     }
     

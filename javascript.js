@@ -26,7 +26,7 @@ function playRound(playerSelection){
     }
     let curScore = score[0] + " - " + score[1];
     if(score[0]==5) {
-        result = "You win! Congratulations!";
+        result = "You win. So, you aren't so dumb after all!";
         score = [0, 0];
     }
     if(score[1]==5){

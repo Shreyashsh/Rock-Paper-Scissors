@@ -1,6 +1,12 @@
 .container{
     display: flex;
     justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+body {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -10,4 +16,19 @@ button {
     width: 100px;
     border-radius: 35px;
     font-weight: bolder;
+}
+#rock {
+    background-color: rgb(110, 94, 94);
+}
+#paper {
+    background-color: rgb(186, 186, 199);
+}
+#scissors {
+    background-color: rgb(41, 172, 172);
+}
+.pane {
+    height: 100px;
+    background-color: rgb(236, 221, 221);
+    font-size: large;
+    text-align: center;
 }

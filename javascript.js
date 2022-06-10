@@ -1,24 +1,32 @@
+let buttons = document.querySelectorAll('button');
+let score = [0, 0];
+
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', function() {playRound(btn.id.toUpperCase())});
+});
+
 function computerPlay(){
     return ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
 }
 
-function playRound(computerSelection, playerSelection){
+function playRound(playerSelection){
+    let result;
+    let computerSelection = computerPlay().toUpperCase();
     if(computerSelection == playerSelection){
-        return 1;
+        result = "It was a tie!";
     } else if ((computerSelection == "ROCK" && playerSelection == "PAPER") || 
         (computerSelection == "PAPER" && playerSelection == "SCISSORS") || 
         (computerSelection == "SCISSORS" && playerSelection == "ROCK")){
-            return 0;
-    } else  return 2;
-}
-
-function game(){
-    for(let i = 0; i < 5; i++){
-        let userSelection = prompt("ROCK, PAPER, SCISSORS?").toUpperCase();
-        let computerSelection = computerPlay().toUpperCase();
-        let result = playRound(computerSelection, userSelection);
-        console.log(['You win!', "It's a tie!", 'You lose!'][result]);
+        score[0]++;
+        result = "You win!";
+    } else  {
+        score[1]++;
+        result = "You lose!";
     }
+    let curScore = score[0] + " - " + score[1];
+    document.getElementById('result').innerHTML = result;
+    document.getElementById('score').innerHTML = curScore;
+    return;
 }
 
-game();
